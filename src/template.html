@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <form id="weatherForm">
+            <label for="cityInput"><span class="material-icons">search</span></label>
+            <input type="text" id="cityInput" placeholder="Enter city name" required/>
+        </form>
+        <div id="tempButtons">
+            <button type="button" id="celsiusBtn" class="temp-btn selected">°C</button>
+            <button type="button" id="fahrenheitBtn" class="temp-btn">°F</button>
+        </div>
+    </div>
+    <div id="generalInfo">
+        <div id="cityName"></div>
+        <div id="weatherDetails">
+            <div class="weather-section">
+                <p id="temperature"></p>
+            </div>
+            <div class="weather-section">
+                <p id="feelsLike"></p>
+                <p id="humidity"></p>
+                <p id="windSpeed"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
