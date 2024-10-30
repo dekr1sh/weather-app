@@ -38,7 +38,10 @@ function setupEventListeners() {
             fahrenheitBtn.classList.remove('selected');
 
             // The match method in JavaScript is used to search a string for a match against a regular expression. 
-            // It returns an array of matches or null if no match is found.
+            // It returns an array of matches if 'g' flag is set.
+            // If 'g' flag is not set, it returns an array containing the first match at 0th pos 
+            // and additional information, such as the index of the match at 1st pos and the input string at 2nd pos.
+            // It returns null if no match is found.
             const temp = document.getElementById('temperature').textContent.match(/[-]?\d+(\.\d+)?/);
             const feelsLike = document.getElementById('feelsLike').textContent.match(/[-]?\d+(\.\d+)?/);
 
