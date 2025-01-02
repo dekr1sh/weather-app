@@ -1,13 +1,13 @@
 import './style.css';
-import { setupEventListeners, displayWeatherData } from './modules/dom';
+import { setupEventListeners, displayWeatherData, WeatherData } from './modules/dom';
 import { getWeather } from './modules/weather';
 
 async function loadMumbaiWeather() {
     const result = await getWeather('Mumbai');
     if (result) {
-        displayWeatherData(result);
+        displayWeatherData(result as WeatherData);
     }
 }
 
 setupEventListeners();
-loadMumbaiWeather();
+loadMumbaiWeather();    
