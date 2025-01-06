@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* .selected {
+            background-color: #e6e6fab3 !important;
+        } */
+    </style>
 </head>
-<body>
-    <div id="header">
-        <form id="weatherForm">
-            <label for="cityInput"><span class="material-icons">search</span></label>
-            <input type="text" id="cityInput" placeholder="Enter city name" required/>
+
+<body class="m-0 min-h-screen font-sans text-white bg-gradient-to-b from-[#87CEFA] to-[#4682B4] flex flex-col gap-y-[175px]">
+    <div class="h-[85px] py-0 px-[25px] grid grid-cols-[1fr_auto] items-center box-content">
+        <form id="weatherForm" class="flex items-end gap-x-[10px]">
+            <label for="cityInput" class="cursor-pointer hover:scale-[1.07]">
+                <span class="material-icons text-[1.8rem] text-[#696969]">search</span>
+            </label>
+            <input type="text" id="cityInput" placeholder="Enter city name" required class="p-0 w-[250px] border-none outline-none rounded-[100px] py-[12px] px-[24px] text-[#333333] text-[16px] 
+                bg-[#e6e6fa] shadow-md focus:border-2 focus:border-[#708090] focus:border-solid font-sans box-content" />
         </form>
-        <div id="tempButtons">
-            <button type="button" id="celsiusBtn" class="temp-btn selected">°C</button>
-            <button type="button" id="fahrenheitBtn" class="temp-btn">°F</button>
+        <div class="flex gap-x-[10px]">
+            <button type="button" id="celsiusBtn" class="p-[10px] rounded-[4px] text-[18px] text-[#696969] bg-[#e6e6fa4d] cursor-pointer font-sans
+                border-none outline-none bg-none appearance-none selected">
+                °C
+            </button>
+            <button type="button" id="fahrenheitBtn" class="p-[10px] rounded-[4px] text-[18px] text-[#696969] bg-[#e6e6fa4d] cursor-pointer font-sans
+                border-none outline-none bg-none appearance-none">
+                °F
+            </button>
         </div>
     </div>
-    <div id="generalInfo">
-        <div id="cityName"></div>
-        <div id="weatherDetails">
-            <div class="weather-section first">
-                <p id="temperature"></p>
+    <div class="py-0 px-[25px] flex-auto flex flex-col items-center gap-y-[5px]">
+        <div id="cityName" class="text-[4rem] font-extrabold"></div>
+        <div class="flex items-center">
+            <div class="font-black text-[4rem] pr-[20px]">
+                <p id="temperature" class="m-0"></p>
             </div>
-            <div class="weather-section second">
-                <p id="feelsLike"></p>
-                <p id="humidity"></p>
-                <p id="windSpeed"></p>
+            <div
+                class="border-l-[2px] border-l-[#ffffff80] pl-[20px] text-[#f3f3f3] flex flex-col gap-y-[5px]">
+                <p id="feelsLike" class="m-0"></p>
+                <p id="humidity" class="m-0"></p>
+                <p id="windSpeed" class="m-0"></p>
             </div>
         </div>
     </div>
 </body>
+
 </html>
